@@ -1,0 +1,130 @@
+$schema: https://github.com/jsonresume/resume-schema/blob/master/schema.json
+basics:
+  name: Ole Petersen
+  email: peteole2707@gmail.com
+  url: https://dev.to/peteole
+  location:
+    countryCode: DE
+    city: Munich
+    region: Bavaria
+    postalCode: "85748"
+    address: Enzianstraße 7, Appartment S006
+education:
+  - institution: Technical University of Munich
+    area: Engineering Science
+    url: https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc
+    startDate: 2020-10
+    score: "1.4"
+    courses:
+      - Algorithmic Game Theory
+      - Theoretische Physik I  Mechanik
+      - Theoretische Physik III Quantenmechanik
+      - Computational Social Choice
+      - Distributed Systems
+      - Introduction to Deep Learning
+      - Engineering Mechanics
+      - Thermodynamics
+      - Fluid Mechanics
+      - Heat Transfer
+      - Basics of Electronics
+      - Material Science
+      - Linear Algebra
+      - Analysis
+      - Tensor Calculus
+      - Chemics
+      - Basics of CAD
+  - institution: Gymnasium Mainz-Oberstadt
+    studyType: Gymnasium
+    startDate: 2009-06
+    endDate: 2020-04
+    score: "1.0"
+projects:
+  - name: Huddle
+    description: Founding of a student group developing a platform that allows students to find their next student group
+    url: https://huddle.hsg.fs.tum.de
+    startDate: 2021-06
+    entity: TUM
+    type: volunteering
+    roles:
+      - Founder
+      - Developer
+  
+work:
+  - name: QAware
+    position: Working student DevOps
+    summary: Solving Cloud Native problems in a team for Telekom Magenta Voice
+    startDate: 2020-09
+    highlights:
+      - Generation of a unified OpenAPI spec for the Telekom Magenta Voice API
+      - Building and improving lots of automation tasks
+  - name: Tuition in Mathematics, Physics, IT and English
+    description: Professional tuition for students from school and university
+    position: Tutor
+    startDate: 2017-01
+    endDate: 2020-09
+    url: https://www.1plus1nachhilfe.de/
+
+volunteer:
+  - position: Voluntary tutor in old school
+    summary: Voluntary support of mathematics and IT courses in my old school, helping out to overcome the difficulties of covid restrictions
+    startDate: 2020-05
+    endDate: 2020-06
+  - position: Jury member
+    summary: Being part of the evaluation team for the Bundeswettbewerb Informatik twice a year (including a small compensation)
+    organization: Bundeswettbewerb Informatik
+    startDate: 2020-11
+    url: https://bwinf.de/
+  
+
+
+awards:
+  - title: Awardee of the final run of the 38th BWInf
+    awarder: Bundeswettbewerb Informatik
+    date: 2020-09
+  - title: National mathematics Olympiad Germany
+    awarder: Mathematik-Olympiaden e.V.
+    date: 2020-06
+  - title: National mathematics Olympiad Germany
+    awarder: Mathematik-Olympiaden e.V.
+    date: 2018-06
+
+skills:
+  - name: Golang
+    level: Advanced
+    keywords: ["programming"]
+  - name: Typescript
+    level: Advanced
+    keywords: ["programming"]
+  - name: C++
+    level: Intermediate
+    keywords: ["programming"]
+  - name: Julia
+    level: Intermediate
+    keywords: ["programming"]
+  - name: Java
+    level: Intermediate
+    keywords: ["programming"]
+  - name: Python
+    level: Intermediate
+    keywords: ["programming"]
+  - name: Rust
+    level: Beginner
+    keywords: ["programming"]
+  - name: PyTorch
+    level: Intermediate
+    keywords: ["library","AI"]
+  - name: TensorFlow
+    level: Intermediate
+    keywords: ["library","AI"]
+
+
+
+languages:
+  - language: German
+    fluency: Native
+  - language: English
+    fluency: Fluent
+  - language: French
+    fluency: Beginner
+  - language: Spanish
+    fluency: Beginner
