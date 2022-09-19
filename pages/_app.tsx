@@ -6,16 +6,16 @@ import { useRouter } from 'next/router'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const pages = [{ name: "Home", path: "/" },{name:"Projects",path:"/projects"}, { name: "CV", path: "/cv" }]
-  const router=useRouter()
+  const pages = [{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: "Skills", path: "/skills" }, { name: "CV", path: "/cv" }, { name: "Contact", path: "/contact" }]
+  const router = useRouter()
   console.log(router.pathname)
   return <>
     <NextUIProvider>
       <Navbar isBordered variant="sticky">
         <Navbar.Content>
           {pages.map((v, i) => (
-            <Link key={i} href={v.path}><Navbar.Link isActive={router.pathname===v.path}>{v.name}</Navbar.Link></Link>
-           ))}
+            <Link key={i} href={v.path}><Navbar.Link isActive={router.pathname === v.path}>{v.name}</Navbar.Link></Link>
+          ))}
         </Navbar.Content>
 
       </Navbar>

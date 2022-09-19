@@ -1,9 +1,7 @@
 import { Badge, Card, Col, Container, Grid, Row, Text } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { ResumeSchema } from "../util/jsonresume"
 import resume from "../util/resume.json"
 
@@ -19,8 +17,13 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
   return (
     <Container css={{ textAlign: "center" }}>
-      <h1>Hi, I am {jsonResume.basics?.name}</h1>
-      <Text>{jsonResume.basics?.summary}</Text>
+      <Head>
+        <title>{jsonResume.basics?.name}</title>
+      </Head>
+      {jsonResume.basics && <>
+        <h1>Hi, I am {jsonResume.basics?.name}</h1>
+        {jsonResume.basics.summary && <Text>{jsonResume.basics?.summary}</Text>}
+      </>}
 
       <Text h2>Education</Text>
       <Grid.Container gap={2} justify="center">

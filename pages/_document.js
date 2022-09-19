@@ -15,7 +15,9 @@ class MyDocument extends Document {
     console.log("rendering document");
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>{CssBaseline.flush()}
+          <title>Resume</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
