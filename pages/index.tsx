@@ -73,7 +73,33 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
           </>)}
         </Grid.Container>
       </>}
-
+      {jsonResume.volunteer && <>
+        <Text h2>Volunteering</Text>
+        <Grid.Container gap={2} justify="center">
+          {jsonResume.volunteer.map((v, i) => <>
+            <Grid key={i}>
+              <Card isHoverable css={{ width: "400px" }}>
+                <Card.Header>
+                  <Col>
+                    <Row>
+                      <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
+                      <Badge color="primary">{v.position}</Badge></Row>
+                    <Text h3>{v.organization}</Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body>
+                  <Text>{v.summary}</Text>
+                  {v.highlights && <Container >
+                    <Text h4>Highlights</Text>
+                    {v.highlights.map((c, i) => <Text key={i}>- {c}</Text>)}
+                  </Container>}
+                </Card.Body>
+                {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+              </Card>
+            </Grid>
+          </>)}
+        </Grid.Container>
+      </>}
       {jsonResume.awards && <>
         <Text h2>Awards</Text>
         <Grid.Container gap={2} justify="center">
