@@ -42,7 +42,26 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
                         </Card>
                     </Grid>))}
             </Grid.Container>
-
+            <Grid.Container gap={2} justify="center">
+                {jsonResume.certificates?.map((v, i) => (
+                    <Grid key={"c" + i}>
+                        <Card isHoverable>
+                            <Card.Header>
+                                <Col>
+                                    <Row>
+                                        <Badge color="primary" >{v.date}</Badge>
+                                        <Badge color="primary" >{v.issuer}</Badge>
+                                    </Row>
+                                    <Text h3>{v.name}</Text>
+                                </Col>
+                            </Card.Header>
+                            <Card.Body css={{ textAlign: "center" }}>
+                                <Text>{v.issuer}</Text>
+                            </Card.Body>
+                            {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+                        </Card>
+                    </Grid>))}
+            </Grid.Container>
 
         </Container>
     )
