@@ -22,7 +22,7 @@ const Projects: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
       <Grid.Container gap={2} justify="center">
         {jsonResume.projects?.map((v, i) => (
           <Grid key={i}>
-            <Card isHoverable css={{ width: "400px" }}>
+            <Card isHoverable className='cv-card'>
               <Card.Header>
                 <Col>
                   <Row>
@@ -49,7 +49,7 @@ const Projects: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
         <Text h2>Publications</Text>
         {jsonResume.publications.map((v, i) => (
           <Grid key={i}>
-            <Card isHoverable css={{ width: "400px" }}>
+            <Card isHoverable className='cv-card'>
               <Card.Header>
                 <Col>
                   <Row>

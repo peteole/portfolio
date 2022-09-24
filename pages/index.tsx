@@ -29,7 +29,7 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
       <Grid.Container gap={2} justify="center">
         {jsonResume.education?.map((v, i) => (
           <Grid key={i}>
-            <Card isHoverable css={{ width: "400px" }}>
+            <Card isHoverable className='cv-card'>
               <Card.Header>
                 <Col>
                   <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
@@ -50,7 +50,7 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
         <Grid.Container gap={2} justify="center">
           {jsonResume.work.map((v, i) => <>
             <Grid key={i}>
-              <Card isHoverable css={{ width: "400px" }}>
+              <Card isHoverable className='cv-card'>
                 <Card.Header>
                   <Col>
                     <Row>
@@ -78,7 +78,7 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
         <Grid.Container gap={2} justify="center">
           {jsonResume.volunteer.map((v, i) => <>
             <Grid key={i}>
-              <Card isHoverable css={{ width: "400px" }}>
+              <Card isHoverable className='cv-card'>
                 <Card.Header>
                   <Col>
                     <Row>
@@ -105,7 +105,7 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
         <Grid.Container gap={2} justify="center">
           {jsonResume.awards.map((v, i) => <>
             <Grid key={i}>
-              <Card isHoverable css={{ width: "400px" }}>
+              <Card isHoverable className='cv-card'>
                 <Card.Header>
                   <Col>
                     <Row>

@@ -24,7 +24,7 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
             <Grid.Container gap={2} justify="center">
                 {jsonResume.skills?.map((v, i) => (
                     <Grid key={"s" + i} >
-                        <Card isHoverable css={{ minWidth: "400px", textAlign: "center" }}>
+                        <Card isHoverable className='cv-card'>
                             <Card.Body css={{ textAlign: "center" }}>
                                 <Row>
                                     <Badge color="primary">{v.level}</Badge>
@@ -37,7 +37,7 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
                 {jsonResume.languages?.map((v, i) => (
                     <Grid key={"l" + i}>
-                        <Card isHoverable css={{ minWidth: "400px", textAlign: "center" }}>
+                        <Card isHoverable className='cv-card'>
                             <Card.Body css={{ textAlign: "center" }}>
                                 <Badge color="primary">{v.fluency}</Badge>
                                 <Text h3>{v.language}</Text>

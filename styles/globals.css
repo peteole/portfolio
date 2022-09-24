@@ -9,3 +9,6 @@ body {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
+.cv-card{
+  width: 330px;
+}
