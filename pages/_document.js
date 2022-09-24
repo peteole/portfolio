@@ -16,7 +16,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>{CssBaseline.flush()}
-          <title>Resume</title>
         </Head>
         <body>
           <Main />

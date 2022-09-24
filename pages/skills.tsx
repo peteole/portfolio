@@ -23,10 +23,13 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
             </Head>
             <Grid.Container gap={2} justify="center">
                 {jsonResume.skills?.map((v, i) => (
-                    <Grid key={"s" + i}>
-                        <Card isHoverable>
+                    <Grid key={"s" + i} >
+                        <Card isHoverable css={{ minWidth: "400px", textAlign: "center" }}>
                             <Card.Body css={{ textAlign: "center" }}>
-                                <Badge color="primary">{v.level}</Badge>
+                                <Row>
+                                    <Badge color="primary">{v.level}</Badge>
+                                    {v.keywords?.map((k, i) => <Badge color="primary" key={i}>{k}</Badge>)}
+                                </Row>
                                 <Text h3>{v.name}</Text>
                             </Card.Body>
                         </Card>
@@ -34,7 +37,7 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
                 {jsonResume.languages?.map((v, i) => (
                     <Grid key={"l" + i}>
-                        <Card isHoverable>
+                        <Card isHoverable css={{ minWidth: "400px", textAlign: "center" }}>
                             <Card.Body css={{ textAlign: "center" }}>
                                 <Badge color="primary">{v.fluency}</Badge>
                                 <Text h3>{v.language}</Text>
@@ -48,7 +51,7 @@ const Skills: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
                         <Card isHoverable>
                             <Card.Header>
                                 <Col>
-                                    <Row>
+                                    <Row align='center'>
                                         <Badge color="primary" >{v.date}</Badge>
                                         <Badge color="primary" >{v.issuer}</Badge>
                                     </Row>

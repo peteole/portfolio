@@ -6,16 +6,17 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { ResumeSchema } from "../util/jsonresume"
 import resume from "../util/resume.json"
+import cv from "../util/cv"
 
 
-export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () => {
+export const getStaticProps: GetStaticProps<{ jsonResume: typeof cv }> = () => {
   return {
     props: {
-      jsonResume: resume
+      jsonResume: cv
     }
   }
 }
-const Contact: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
+const Contact: NextPage<{ jsonResume: typeof cv }> = ({ jsonResume }) => {
 
   return (
     <Container css={{ textAlign: "center" }}>
@@ -29,6 +30,7 @@ const Contact: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
         {jsonResume.basics.email && <Text> <Link href={"mailto:" + jsonResume.basics.email}>{jsonResume.basics?.email}</Link></Text>}
         {jsonResume.basics.url && <Text><Link href={jsonResume.basics.url}>{jsonResume.basics?.url}</Link></Text>}
         {jsonResume.basics.phone && <Text>{jsonResume.basics?.phone}</Text>}
+        {jsonResume.basics.profiles?.map((v, i) => <Text key={i}>{v.network}: <Link href={v.url || ""}>{v.username}</Link></Text>)}
       </>}
     </Container>
   )
