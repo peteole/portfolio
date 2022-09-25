@@ -2,7 +2,7 @@ import { Badge, Card, Col, Container, Grid, Row, Text } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ResumeSchema } from "../util/jsonresume"
+import { ResumeSchema } from "../util/resume"
 import resume from "../util/resume.json"
 
 export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () => {
