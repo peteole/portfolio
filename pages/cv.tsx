@@ -1,6 +1,5 @@
 import { Col, Container, Text } from "@nextui-org/react"
 import { NextPage } from "next"
-import Link from "next/link"
 
 const CV: NextPage = () => {
     return <Container>

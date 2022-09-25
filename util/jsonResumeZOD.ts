@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from "zod"
 
-export default z
+export const schema = z
   .object({
     $schema: z
       .string()
@@ -12,12 +12,19 @@ export default z
     basics: z
       .object({
         name: z.string().optional(),
-        label: z.string().describe("e.g. Web Developer").optional(),
+        label: z
+          .string()
+          .describe("e.g. Web Developer")
+          .optional(),
         image: z
           .string()
           .describe("URL (as per RFC 3986) to a image in JPEG or PNG format")
           .optional(),
-        email: z.string().email().describe("e.g. thomas@gmail.com").optional(),
+        email: z
+          .string()
+          .email()
+          .describe("e.g. thomas@gmail.com")
+          .optional(),
         phone: z
           .string()
           .describe(
@@ -54,7 +61,7 @@ export default z
               .describe(
                 "The general region where you live. Can be a US state, or a province, for instance."
               )
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
           .optional(),
@@ -74,14 +81,14 @@ export default z
                   .string()
                   .url()
                   .describe("e.g. http://twitter.example.com/neutralthoughts")
-                  .optional(),
+                  .optional()
               })
               .catchall(z.any())
           )
           .describe(
             "Specify any number of social networks that you participate in"
           )
-          .optional(),
+          .optional()
       })
       .catchall(z.any())
       .optional(),
@@ -89,36 +96,29 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. Facebook").optional(),
-            location: z.string().describe("e.g. Menlo Park, CA").optional(),
+            name: z
+              .string()
+              .describe("e.g. Facebook")
+              .optional(),
+            location: z
+              .string()
+              .describe("e.g. Menlo Park, CA")
+              .optional(),
             description: z
               .string()
               .describe("e.g. Social Media Company")
               .optional(),
-            position: z.string().describe("e.g. Software Engineer").optional(),
+            position: z
+              .string()
+              .describe("e.g. Software Engineer")
+              .optional(),
             url: z
               .string()
               .url()
               .describe("e.g. http://facebook.example.com")
               .optional(),
-            startDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
-            endDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
+            startDate: z.any().optional(),
+            endDate: z.any().optional(),
             summary: z
               .string()
               .describe(
@@ -134,7 +134,7 @@ export default z
                   )
               )
               .describe("Specify multiple accomplishments")
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -143,31 +143,21 @@ export default z
       .array(
         z
           .object({
-            organization: z.string().describe("e.g. Facebook").optional(),
-            position: z.string().describe("e.g. Software Engineer").optional(),
+            organization: z
+              .string()
+              .describe("e.g. Facebook")
+              .optional(),
+            position: z
+              .string()
+              .describe("e.g. Software Engineer")
+              .optional(),
             url: z
               .string()
               .url()
               .describe("e.g. http://facebook.example.com")
               .optional(),
-            startDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
-            endDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
+            startDate: z.any().optional(),
+            endDate: z.any().optional(),
             summary: z
               .string()
               .describe(
@@ -183,7 +173,7 @@ export default z
                   )
               )
               .describe("Specify accomplishments and achievements")
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -201,26 +191,16 @@ export default z
               .url()
               .describe("e.g. http://facebook.example.com")
               .optional(),
-            area: z.string().describe("e.g. Arts").optional(),
-            studyType: z.string().describe("e.g. Bachelor").optional(),
-            startDate: z
+            area: z
               .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
+              .describe("e.g. Arts")
               .optional(),
-            endDate: z
+            studyType: z
               .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
+              .describe("e.g. Bachelor")
               .optional(),
+            startDate: z.any().optional(),
+            endDate: z.any().optional(),
             score: z
               .string()
               .describe("grade point average, e.g. 3.67/4.0")
@@ -232,7 +212,7 @@ export default z
                   .describe("e.g. H1302 - Introduction to American history")
               )
               .describe("List notable courses/subjects")
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -245,20 +225,15 @@ export default z
               .string()
               .describe("e.g. One of the 100 greatest minds of the century")
               .optional(),
-            date: z
+            date: z.any().optional(),
+            awarder: z
               .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
+              .describe("e.g. Time Magazine")
               .optional(),
-            awarder: z.string().describe("e.g. Time Magazine").optional(),
             summary: z
               .string()
               .describe("e.g. Received for my work with Quantum Physics")
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -274,13 +249,19 @@ export default z
               .string()
               .describe("e.g. Certified Kubernetes Administrator")
               .optional(),
-            date: z.string().describe("e.g. 1989-06-12").optional(),
+            date: z
+              .string()
+              .describe("e.g. 1989-06-12")
+              .optional(),
             url: z
               .string()
               .url()
               .describe("e.g. http://example.com")
               .optional(),
-            issuer: z.string().describe("e.g. CNCF").optional(),
+            issuer: z
+              .string()
+              .describe("e.g. CNCF")
+              .optional()
           })
           .catchall(z.any())
       )
@@ -292,20 +273,15 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. The World Wide Web").optional(),
+            name: z
+              .string()
+              .describe("e.g. The World Wide Web")
+              .optional(),
             publisher: z
               .string()
               .describe("e.g. IEEE, Computer Magazine")
               .optional(),
-            releaseDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
+            releaseDate: z.any().optional(),
             url: z
               .string()
               .url()
@@ -318,7 +294,7 @@ export default z
               .describe(
                 "Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML."
               )
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -328,12 +304,18 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. Web Development").optional(),
-            level: z.string().describe("e.g. Master").optional(),
+            name: z
+              .string()
+              .describe("e.g. Web Development")
+              .optional(),
+            level: z
+              .string()
+              .describe("e.g. Master")
+              .optional(),
             keywords: z
               .array(z.string().describe("e.g. HTML"))
               .describe("List some keywords pertaining to this skill")
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -343,8 +325,14 @@ export default z
       .array(
         z
           .object({
-            language: z.string().describe("e.g. English, Spanish").optional(),
-            fluency: z.string().describe("e.g. Fluent, Beginner").optional(),
+            language: z
+              .string()
+              .describe("e.g. English, Spanish")
+              .optional(),
+            fluency: z
+              .string()
+              .describe("e.g. Fluent, Beginner")
+              .optional()
           })
           .catchall(z.any())
       )
@@ -354,10 +342,13 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. Philosophy").optional(),
+            name: z
+              .string()
+              .describe("e.g. Philosophy")
+              .optional(),
             keywords: z
               .array(z.string().describe("e.g. Friedrich Nietzsche"))
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -366,13 +357,16 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. Timothy Cook").optional(),
+            name: z
+              .string()
+              .describe("e.g. Timothy Cook")
+              .optional(),
             reference: z
               .string()
               .describe(
                 "e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing."
               )
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -382,7 +376,10 @@ export default z
       .array(
         z
           .object({
-            name: z.string().describe("e.g. The World Wide Web").optional(),
+            name: z
+              .string()
+              .describe("e.g. The World Wide Web")
+              .optional(),
             description: z
               .string()
               .describe(
@@ -401,24 +398,8 @@ export default z
               .array(z.string().describe("e.g. AngularJS"))
               .describe("Specify special elements involved")
               .optional(),
-            startDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
-            endDate: z
-              .string()
-              .regex(
-                new RegExp(
-                  "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
-                )
-              )
-              .describe("e.g. 2014-06-29")
-              .optional(),
+            startDate: z.any().optional(),
+            endDate: z.any().optional(),
             url: z
               .string()
               .url()
@@ -441,7 +422,7 @@ export default z
               .describe(
                 " e.g. 'volunteering', 'presentation', 'talk', 'application', 'conference'"
               )
-              .optional(),
+              .optional()
           })
           .catchall(z.any())
       )
@@ -461,12 +442,12 @@ export default z
         lastModified: z
           .string()
           .describe("Using ISO 8601 with YYYY-MM-DDThh:mm:ss")
-          .optional(),
+          .optional()
       })
       .catchall(z.any())
       .describe(
         "The schema version and any other tooling configuration lives here"
       )
-      .optional(),
+      .optional()
   })
-  .strict();
+  .strict()

@@ -1,22 +1,18 @@
-import { Badge, Card, Col, Container, Grid, Row, Text } from '@nextui-org/react'
+import { Container, Text } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { ResumeSchema } from "../util/jsonresume"
-import resume from "../util/resume.json"
-import cv from "../util/cv"
+import resume, { ResumeSchema } from "../util/resume"
 
 
-export const getStaticProps: GetStaticProps<{ jsonResume: typeof cv }> = () => {
+export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () => {
   return {
     props: {
-      jsonResume: cv
+      jsonResume: resume
     }
   }
 }
-const Contact: NextPage<{ jsonResume: typeof cv }> = ({ jsonResume }) => {
+const Contact: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
   return (
     <Container css={{ textAlign: "center" }}>
