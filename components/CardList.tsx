@@ -2,21 +2,20 @@ import { Container, Row } from "@nextui-org/react"
 import React from "react"
 
 const CardList: React.FC<{ children: JSX.Element[] | undefined }> = (props) => {
-    const [colCount, setColCount] = React.useState(1)
-    const handleResize = () => setColCount(Math.min(Math.max(Math.floor(window.innerWidth / 600), 1), 3))
-    React.useEffect(() => {
-        handleResize()
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-    const cols = []
-    for (let i = 0; i < colCount; i++) {
-        cols.push(props.children?.filter((_, j) => j % colCount === i))
+
+    const versions = []
+    for (const colCount of [1, 2, 3]) {
+        const cols = []
+        for (let i = 0; i < colCount; i++) {
+            cols.push(props.children?.filter((_, j) => j % colCount === i))
+        }
+        versions.push(cols)
     }
-    return <Container>
-        <Row justify="center">
-            {cols.map((col, i) => <div key={i}>{col}</div>)}
+    return <>
+        {versions.map((cols, v) => <Row key={v} justify="center" className={"card-container card-container-" + v}>
+            {cols.map((col, i) => <div className="card-container-col" key={i}>{col}</div>)}
         </Row>
-    </Container>
+        )}
+    </>
 }
 export default CardList

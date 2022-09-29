@@ -2,7 +2,7 @@ import { Col, Container, Text } from "@nextui-org/react"
 import { NextPage } from "next"
 
 const CV: NextPage = () => {
-    return <Container>
+    return <Container className="cv-body">
         <Col><Text>
             <a href="/resume.pdf">Download PDF</a>
         </Text>

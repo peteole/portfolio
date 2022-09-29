@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () =
 const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
   return (
-    <Container css={{ textAlign: "center" }}>
+    <Container className="cv-body">
       <Head>
         <title>{jsonResume.basics?.name}</title>
       </Head>
