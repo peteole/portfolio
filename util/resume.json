@@ -1,0 +1,484 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+    "basics": {
+        "name": "Ole Petersen",
+        "email": "peteole2707@gmail.com",
+        "summary": "I am an ambitious student with a passion for software, scientific computing, simulation, aerospace, math and game theory.",
+        "url": "https://ole-petersen.vercel.app",
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "peteole",
+                "url": "https://github.com/peteole"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "Ole Petersen",
+                "url": "https://www.linkedin.com/in/ole-petersen-79727119b"
+            },
+            {
+                "network": "dev.to",
+                "username": "peteole",
+                "url": "https://dev.to/peteole"
+            }
+        ]
+    },
+    "education": [
+        {
+            "institution": "Technical University of Munich",
+            "studyType": "Bachelor of Science",
+            "area": "Engineering Science",
+            "url": "https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc",
+            "startDate": "2020-10",
+            "score": "1.4",
+            "courses": [
+                "Algorithmic Game Theory",
+                "Theoretische Physik I  Mechanik",
+                "Theoretische Physik III Quantenmechanik",
+                "Computational Social Choice",
+                "Distributed Systems",
+                "Introduction to Deep Learning",
+                "Engineering Mechanics",
+                "Thermodynamics",
+                "Fluid Mechanics",
+                "Heat Transfer",
+                "Basics of Electronics",
+                "Material Science",
+                "Linear Algebra",
+                "Analysis",
+                "Tensor Calculus",
+                "Chemics",
+                "Basics of CAD"
+            ]
+        },
+        {
+            "institution": "Gymnasium Mainz-Oberstadt",
+            "studyType": "Gymnasium",
+            "startDate": "2009-06",
+            "endDate": "2020-04",
+            "score": "1.0",
+            "courses": [
+                "Mathematics",
+                "Physics",
+                "English"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Huddle",
+            "description": "Founding of a student group developing a platform that allows students to find their next student group",
+            "url": "https://huddle.hsg.fs.tum.de",
+            "startDate": "2021-06",
+            "entity": "TUM",
+            "type": "volunteering",
+            "roles": [
+                "Founder",
+                "Developer"
+            ],
+            "keywords": [
+                "React",
+                "Postgresql",
+                "Docker",
+                "Kubernetes"
+            ]
+        },
+        {
+            "name": "Collaborative Drone Interactions",
+            "description": "Participation in the Decentralized Drone Interactions Team of the Ferienakademie, investigating the decentralized deployment of drones with a focus on automated auctions",
+            "entity": "Ferienakademie",
+            "type": "seminar",
+            "startDate": "2021-09",
+            "endDate": "2021-09",
+            "roles": [
+                "Participant"
+            ],
+            "keywords": [
+                "Drones",
+                "Auctions",
+                "Decentralized Systems"
+            ],
+            "url": "https://ferienakademie.de"
+        },
+        {
+            "name": "H7-Jet",
+            "description": "Design of a flying-wing radio-controlled plane from the ground up",
+            "type": "engineering",
+            "url": "https://www.instagram.com/h7_jet",
+            "startDate": "2018-06",
+            "endDate": "2020-06",
+            "keywords": [
+                "CAD",
+                "Aerospace",
+                "Engineering"
+            ]
+        },
+        {
+            "name": "Flight Data Telemetry for RC Airplanes",
+            "description": "Developement of hardware and software necessary to get live data from an RC plane to a laptop",
+            "type": "engineering",
+            "url": "https://github.com/peteole?tab=projects",
+            "startDate": "2019-07",
+            "endDate": "2020-06",
+            "keywords": [
+                "Aerospace",
+                "Engineering",
+                "C++",
+                "Arduino",
+                "PlatformIO"
+            ]
+        },
+        {
+            "name": "AI-Autopilot",
+            "description": "Development of an AI-based autopilot prototype in a team of four",
+            "type": "engineering",
+            "url": "https://github.com/fynsta/Intelliplane",
+            "startDate": "2020-06",
+            "endDate": "2020-08",
+            "keywords": [
+                "Python",
+                "Tensorflow",
+                "Keras",
+                "Aerospace",
+                "Engineering"
+            ],
+            "entity": "BWKI"
+        },
+        {
+            "name": "ANN-Modules",
+            "description": "Developement of a custom library to flexibly build neural networks; experimenting with GPU acceleration; porting to WebAssembly",
+            "type": "software",
+            "url": "https://github.com/peteole/ann-modules",
+            "startDate": "2019-09",
+            "endDate": "2020-06",
+            "keywords": [
+                "C++",
+                "OpenCL",
+                "WebAssembly",
+                "Emscripten",
+                "Javascript",
+                "Neural Networks"
+            ]
+        },
+        {
+            "name": "SPMSatRx",
+            "description": "Arduino/PlatformIO library to interface spektrum sattelite receivers",
+            "type": "software",
+            "url": "https://github.com/peteole/SPMSatRx",
+            "startDate": "2020-06",
+            "endDate": "2020-07",
+            "keywords": [
+                "C++",
+                "Arduino",
+                "PlatformIO",
+                "Engineering"
+            ]
+        },
+        {
+            "name": "Economy Simulation",
+            "description": "Developement of a simulation of a simple economy, modeling the production and the consumption of goods, special focus an a custom PriorityQueue",
+            "type": "software",
+            "entity": "Gymnasium Mainz-Oberstadt",
+            "url": "https://github.com/peteole/economySim",
+            "startDate": "2018-07",
+            "endDate": "2019-07",
+            "keywords": [
+                "Java",
+                "Simulation",
+                "Eclipse"
+            ]
+        },
+        {
+            "name": "Heidelberger Life-Science Lab",
+            "entity": "DKFZ",
+            "startDate": "2018",
+            "endDate": "2020",
+            "url": "https://www.life-science-lab.org/cms/",
+            "description": "Participation in HLSL, a program encouraging young students to do their own research projects"
+        }
+    ],
+    "work": [
+        {
+            "name": "QAware",
+            "position": "Working student DevOps",
+            "summary": "Solving Cloud Native problems in a team for Telekom Magenta Voice",
+            "startDate": "2020-09",
+            "highlights": [
+                "Implemented automated documentation to make it easier for developers to work on the platform",
+                "Improved observability",
+                "Worked on automation tasks"
+            ],
+            "url": "https://www.qaware.de",
+            "location": "Munich, Germany"
+        },
+        {
+            "name": "Tuition in Mathematics, Physics, IT and English",
+            "description": "Professional tuition for students from school and university",
+            "position": "Tutor",
+            "startDate": "2017-01",
+            "endDate": "2020-09",
+            "url": "https://www.1plus1nachhilfe.de/"
+        },
+        {
+            "name": "DLR Braunschweig",
+            "position": "Intern",
+            "description": "Student internship, getting to know the basics of CFD",
+            "startDate": "2018-01",
+            "endDate": "2018-02",
+            "url": "https://www.dlr.de/content/de/institutspraesentation/institut-fuer-aerodynamik-und-stroemungstechnik.html"
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "TUM",
+            "position": "Founder",
+            "url": "https://huddle.hsg.fs.tum.de",
+            "startDate": "2021-02",
+            "summary": "Founding of a student group developing a platform that allows students to find their next student group"
+        },
+        {
+            "position": "Voluntary tutor in old school",
+            "organization": "Gymnasium Mainz-Oberstadt",
+            "summary": "Voluntary support of mathematics and IT courses in my old school, helping out to overcome the difficulties of covid restrictions",
+            "startDate": "2020-05",
+            "endDate": "2020-06"
+        },
+        {
+            "position": "Jury member",
+            "summary": "Being part of the evaluation team for the Bundeswettbewerb Informatik twice a year (including a small compensation)",
+            "organization": "Bundeswettbewerb Informatik",
+            "startDate": "2020-11",
+            "url": "https://bwinf.de/"
+        }
+    ],
+    "awards": [
+        {
+            "awarder": "TUM",
+            "date": "2021-09",
+            "title": "Deutschlandstipendium",
+            "summary": "I was chosen to be a scholar of the Deutschlandstipendium."
+        },
+        {
+            "title": "Awardee of the final run of the 38th BWInf",
+            "awarder": "Bundeswettbewerb Informatik",
+            "date": "2020-09",
+            "summary": "Got awarded in the final run of the 38th Bundeswettbewerb Informatik, a national competition for high school students in Germany",
+            "url": "https://www.heise.de/news/Bundeswettbewerb-Informatik-Die-Sieger-der-38-Ausgabe-stehen-fest-4906184.html"
+        },
+        {
+            "title": "National mathematics Olympiad Germany",
+            "awarder": "Mathematik-Olympiaden e.V.",
+            "date": "2020-06",
+            "url": "https://www.mo2020.de",
+            "summary": "Partisipation in the online version of the national mathematics olympiad"
+        },
+        {
+            "title": "National mathematics Olympiad Germany",
+            "awarder": "Mathematik-Olympiaden e.V.",
+            "date": "2018-06",
+            "url": "https://mo2018.de/teilnehmende",
+            "summary": "Participation in the national mathematics olympiad"
+        },
+        {
+            "title": "Jugend trainiert Mathematik",
+            "awarder": "Bundesweite Mathematikwettbewerbe",
+            "date": "2014",
+            "summary": "Participation in a program to train young mathematicians, consisting of two seminars per year and monthly exercise sheets",
+            "url": "https://www.mathe-wettbewerbe.de/jugend-trainiert-mathematik"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Golang",
+            "level": "Advanced",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "Typescript",
+            "level": "Advanced",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "C++",
+            "level": "Intermediate",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "Julia",
+            "level": "Intermediate",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "Java",
+            "level": "Intermediate",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "Python",
+            "level": "Intermediate",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "Rust",
+            "level": "Beginner",
+            "keywords": [
+                "programming"
+            ]
+        },
+        {
+            "name": "PyTorch",
+            "level": "Intermediate",
+            "keywords": [
+                "library",
+                "AI"
+            ]
+        },
+        {
+            "name": "TensorFlow",
+            "level": "Intermediate",
+            "keywords": [
+                "library",
+                "AI"
+            ]
+        },
+        {
+            "name": "Kubernetes",
+            "level": "Intermediate",
+            "keywords": [
+                "cloud",
+                "devops"
+            ]
+        },
+        {
+            "name": "Docker",
+            "level": "Intermediate",
+            "keywords": [
+                "cloud",
+                "devops"
+            ]
+        },
+        {
+            "name": "Terraform",
+            "level": "Beginner",
+            "keywords": [
+                "cloud",
+                "devops"
+            ]
+        },
+        {
+            "name": "Git",
+            "level": "Intermediate",
+            "keywords": [
+                "devops",
+                "tools"
+            ]
+        },
+        {
+            "name": "VSCode",
+            "level": "Intermediate",
+            "keywords": [
+                "tools"
+            ]
+        },
+        {
+            "name": "SQL",
+            "level": "Intermediate",
+            "keywords": [
+                "database"
+            ]
+        },
+        {
+            "name": "Azure",
+            "level": "Beginner",
+            "keywords": [
+                "cloud"
+            ]
+        },
+        {
+            "name": "Grafana",
+            "level": "Intermediate",
+            "keywords": [
+                "tools",
+                "monitoring"
+            ]
+        },
+        {
+            "name": "Prometheus",
+            "level": "Intermediate",
+            "keywords": [
+                "tools",
+                "monitoring"
+            ]
+        },
+        {
+            "name": "Humio",
+            "level": "Intermediate",
+            "keywords": [
+                "tools",
+                "monitoring"
+            ]
+        },
+        {
+            "name": "Linux",
+            "level": "Intermediate",
+            "keywords": [
+                "tools"
+            ]
+        },
+        {
+            "name": "React/NextJS",
+            "level": "Intermediate",
+            "keywords": [
+                "web",
+                "programming"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "German",
+            "fluency": "Native"
+        },
+        {
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "French",
+            "fluency": "Beginner"
+        },
+        {
+            "language": "Spanish",
+            "fluency": "Beginner"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Outdoor running",
+            "keywords": [
+                "workout"
+            ]
+        },
+        {
+            "name": "Camping"
+        },
+        {
+            "name": "Building RC Aircraft"
+        },
+        {
+            "name": "Reading tech stories"
+        }
+    ]
+}
