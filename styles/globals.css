@@ -39,7 +39,7 @@ body {
   }
 }
 .card-container-col{
-  display: inline-grid;
+  display: inline-table;
   margin: auto;
   max-width: 100%;
 }
