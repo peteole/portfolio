@@ -7,6 +7,7 @@ body {
     font-smooth: always;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+    width: 100vw;
   }
 .cv-card{
   width: 330px;
