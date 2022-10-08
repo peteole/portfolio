@@ -18,7 +18,7 @@ body {
   text-align: center;
   padding: 0;
 }
-@supports (break-after: column){
+
 @media only screen and (min-width: 1600px){
   div.card-container-columns{
     width: 1050px;
@@ -56,9 +56,6 @@ body {
   div.card-container:nth-last-child(1){
     break-after: column;
   }
-}
-}
-@media only screen and (max-width: 1000px) {
 }
 div.card-container-columns{
   margin: auto;
