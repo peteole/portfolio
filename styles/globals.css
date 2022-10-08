@@ -64,6 +64,10 @@ div.card-container-columns{
   margin: auto;
 }
 
+div.card-container-columns>div{
+  display: flex;
+  flex-direction: column;
+}
 div.card-container{
   display: inline-block;
   padding: 0;
