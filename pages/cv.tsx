@@ -6,7 +6,7 @@ const CV: NextPage = () => {
         <Col><Text>
             <a href="/resume.pdf">Download PDF</a>
         </Text>
-            <iframe width="100%" height="1000px" src='/resume.pdf' />
+            <iframe width="100%" height="2000px" src='/resume.pdf' />
         </Col>
     </Container>
 

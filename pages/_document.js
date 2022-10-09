@@ -16,6 +16,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>{CssBaseline.flush()}
+          <link rel="icon" href="/icon.svg" />
         </Head>
         <body>
           <Main />
