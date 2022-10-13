@@ -1,7 +1,9 @@
-import { Badge, Card, Col, Container, Row, Text } from '@nextui-org/react'
+import { Badge, Card, Col, Container, Modal, Row, Text } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import CardList from '../components/CardList'
 import resume, { ResumeSchema } from "../util/resume"
 
@@ -13,9 +15,24 @@ export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () =
   }
 }
 const Projects: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
+  const router = useRouter();
+  const modalId = router.asPath.split('#')[1];
+  const [modalProject, setModalProject] = useState(jsonResume.projects?.[-1]);
+  useEffect(() => {
+    setModalProject(jsonResume.projects?.[parseInt(modalId || "-1")]);
+  }, [jsonResume.projects, modalId])
 
   return (
     <Container className="cv-body">
+      <Modal open={modalProject !== undefined} onClose={() => router.push({ hash: "" })} closeButton blur width='90vw'>
+        <Modal.Header>
+          <h1>Demo: {modalProject?.name}</h1>
+        </Modal.Header>
+        <Modal.Body>
+          <Text>{modalProject?.summary}{modalProject?.description}</Text>
+          <iframe src={modalProject?.["demo"]} height="1000px" />
+        </Modal.Body>
+      </Modal>
       <Head>
         <title>{jsonResume.basics?.name} - Projects</title>
       </Head>
@@ -40,7 +57,7 @@ const Projects: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
               </Container>}
               {v.keywords && <Container ><Text h4>Technologies</Text>{v.keywords.map((c, i) => <Badge key={i}>{c}</Badge>)}</Container>}
             </Card.Body>
-            {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+            {(v.url) && <Card.Footer><Row justify='space-between'><Link href={v.url}>Learn more</Link>{v["demo"] && <Link href={"/projects#" + i}>Demo</Link>}</Row></Card.Footer>}
           </Card>))}
       </CardList>
       {jsonResume.publications && <>
