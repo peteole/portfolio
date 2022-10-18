@@ -116,7 +116,7 @@
         },
         {
             "name": "Flight Data Telemetry for RC Airplanes",
-            "description": "Developement of hardware and software necessary to get live data from an RC plane to a laptop",
+            "description": "Development of hardware and software necessary to get live data from an RC plane to a laptop",
             "type": "engineering",
             "url": "https://github.com/peteole?tab=projects",
             "startDate": "2019-07",
@@ -147,7 +147,7 @@
         },
         {
             "name": "ANN-Modules",
-            "description": "Developement of a custom library to flexibly build neural networks; experimenting with GPU acceleration; porting to WebAssembly",
+            "description": "Development of a custom library to flexibly build neural networks; experimenting with GPU acceleration; porting to WebAssembly",
             "type": "software",
             "url": "https://github.com/peteole/ann-modules",
             "startDate": "2019-09",
@@ -163,7 +163,7 @@
         },
         {
             "name": "SPMSatRx",
-            "description": "Arduino/PlatformIO library to interface spektrum sattelite receivers",
+            "description": "Arduino/PlatformIO library to interface Spektrum satellite receivers",
             "type": "software",
             "url": "https://github.com/peteole/SPMSatRx",
             "startDate": "2020-06",
@@ -177,7 +177,7 @@
         },
         {
             "name": "Economy Simulation",
-            "description": "Developement of a simulation of a simple economy, modeling the production and the consumption of goods, special focus an a custom PriorityQueue",
+            "description": "Development of a simulation of a simple economy, modeling the production and the consumption of goods, special focus an a custom PriorityQueue",
             "type": "software",
             "entity": "Gymnasium Mainz-Oberstadt",
             "url": "https://github.com/peteole/economySim",
@@ -271,7 +271,7 @@
             "awarder": "Mathematik-Olympiaden e.V.",
             "date": "2020-06",
             "url": "https://www.mo2020.de",
-            "summary": "Partisipation in the online version of the national mathematics olympiad"
+            "summary": "Participation in the online version of the national mathematics olympiad"
         },
         {
             "title": "National mathematics Olympiad Germany",
