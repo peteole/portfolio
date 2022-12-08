@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate_resume_pdf":"./generateResume.sh"
+    "generate_resume_pdf": "./generateResume.sh"
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",

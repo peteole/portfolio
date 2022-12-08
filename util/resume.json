@@ -30,7 +30,7 @@
             "area": "Engineering Science",
             "url": "https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc",
             "startDate": "2020-10",
-            "score": "1.4",
+            "score": "1.4 (1.0-5.0 scale)",
             "courses": [
                 "Algorithmic Game Theory",
                 "Theoretische Physik I  Mechanik",
@@ -52,11 +52,24 @@
             ]
         },
         {
+            "institution": "University of Exeter",
+            "studyType": "Term abroad",
+            "url": "https://www.exeter.ac.uk/study/undergraduate/courses/engineering/engineering/",
+            "startDate": "2022-09",
+            "endDate": "2023-01",
+            "courses": [
+                "Fluid Dynamics and CFD",
+                "Finite Element Analysis for HVM",
+                "Multi-Objective Optimization"
+            ],
+            "score": "1.4 (1.0-5.0 scale)"
+        },
+        {
             "institution": "Gymnasium Mainz-Oberstadt",
             "studyType": "Gymnasium",
             "startDate": "2009-06",
             "endDate": "2020-04",
-            "score": "1.0",
+            "score": "1.0 (1.0-6.0 scale)",
             "courses": [
                 "Mathematics",
                 "Physics",
@@ -201,13 +214,13 @@
     "work": [
         {
             "name": "QAware",
-            "position": "Working student DevOps",
-            "summary": "Solving Cloud Native problems in a team for Telekom Magenta Voice",
+            "position": "Working Student Platform Engineering",
+            "summary": "Building and maintaining the backend platform for the Telekom Smart Speaker",
             "startDate": "2020-09",
             "highlights": [
-                "Implemented automated documentation to make it easier for developers to work on the platform",
-                "Improved observability",
-                "Worked on automation tasks"
+                "Working with code from multiple teams in a variety of programming languages",
+                "Getting hands-on experience maintaining a scalable Cloud-Native platform",
+                "Building/improving internal tools, CI/CD pipelines, IaC, observability dashboards, etc."
             ],
             "url": "https://www.qaware.de",
             "location": "Munich, Germany"
