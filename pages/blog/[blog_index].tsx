@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import Head from 'next/head'
 import resume, { ResumeSchema } from "../../util/resume"
 import { Badge, Card, Col, Container, Row, Text } from "@nextui-org/react"
-import { loadBlogPosts } from "./blogPosts"
+import { loadBlogPosts } from "."
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
