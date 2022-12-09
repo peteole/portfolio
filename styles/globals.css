@@ -17,6 +17,7 @@ body {
 .cv-body{
   text-align: center;
   padding: 0;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 1600px){
