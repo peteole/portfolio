@@ -494,5 +494,12 @@
         {
             "name": "Reading tech stories"
         }
+    ],
+    "publications": [
+        {
+            "url": "https://raw.githubusercontent.com/peteole/blog/main/openfoam_gmsh_2d_aerofoil/index.md",
+            "type": "blog",
+            "releaseDate": "2022-12"
+        }
     ]
 }

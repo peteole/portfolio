@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const pages = [{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: "Skills", path: "/skills" }, { name: "CV", path: "/cv" }, { name: "Contact", path: "/contact" }]
+  const pages = [{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: "Skills", path: "/skills" }, { name: "CV", path: "/cv" }, { name: "Contact", path: "/contact" },{name: "Blog", path: "/blog"}]
   const router = useRouter()
   console.log(router.pathname)
   return <>

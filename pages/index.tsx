@@ -52,7 +52,8 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
                 <Col>
                   <Row>
                     <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
-                    <Badge color="primary">{v.position}</Badge></Row>
+                    <Badge color="primary">{v.position}</Badge>
+                  </Row>
                   <Text h3>{v.name}</Text>
                 </Col>
               </Card.Header>
