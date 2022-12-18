@@ -60,7 +60,7 @@ const Projects: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
             {(v.url) && <Card.Footer><Row justify='space-between'><Link href={v.url}>Learn more</Link>{v["demo"] && <Link href={"/projects#" + i}>Demo</Link>}</Row></Card.Footer>}
           </Card>))}
       </CardList>
-      {jsonResume.publications && <>
+      {jsonResume.publications?.filter(p=>p.type!=="blog")?.length && <>
         <Text h2>Publications</Text>
         <CardList>
           {jsonResume.publications.map((v, i) => (

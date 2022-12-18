@@ -67,8 +67,9 @@ export default Blog
 
 import resume, { ResumeSchema } from "../../util/resume"
 
+let _posts: BlogPost[]|null = null
 export async function loadBlogPosts():Promise<BlogPost[]>{
-    //const urls=["https://raw.githubusercontent.com/peteole/blog/main/openfoam_gmsh_2d_aerofoil/index.md"]
+    if(_posts) return _posts
     const posts=resume.publications?.filter(p=>p.type==="blog"&&p.url)
     if(!posts) return []
     const urls = posts.map(p=>p.url||"")
@@ -76,15 +77,17 @@ export async function loadBlogPosts():Promise<BlogPost[]>{
         const res = await fetch(url)
         return res.text()
     }))
-    return postContents.map((content,i)=>{
+    _posts= postContents.map((content,i)=>{
         const baseUrl = urls[i].replace("index.md","")
         //content = content.replace(/!\[.*\]\((.*)\)/g,`![image](${baseUrl}$1)`)
         // replace relative links with absolute links
-        content = content.replace(/\[(.*)\]\((.*)\)/g,`[$1](${baseUrl}$2)`)
+        content = content.replace(/\[(.*)\]\((([a-z]|[A_Z]|[0-9]|\.|\/)*)\)/g,`[$1](${baseUrl}$2)`)
+        console.log(content)
         return {
             content:content,
             date:posts[i].releaseDate||null,
-            title: content.split("\n")[0].replace("# ","")
+            title: posts[i].name||content.split("\n")[0].replace("# ","")
         }
     })
+    return _posts
 }
