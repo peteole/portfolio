@@ -21,8 +21,6 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 }
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
-    posts.reverse()
-    const router = useRouter()
     return (
         <Container className="cv-body">
             <Head>
@@ -82,7 +80,7 @@ export async function loadBlogPosts():Promise<BlogPost[]>{
         //content = content.replace(/!\[.*\]\((.*)\)/g,`![image](${baseUrl}$1)`)
         // replace relative links with absolute links
         content = content.replace(/\[(.*)\]\((([a-z]|[A_Z]|[0-9]|\.|\/)*)\)/g,`[$1](${baseUrl}$2)`)
-        console.log(content)
+        //console.log(content)
         return {
             content:content,
             date:posts[i].releaseDate||null,

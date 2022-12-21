@@ -500,6 +500,24 @@
             "url": "https://raw.githubusercontent.com/peteole/blog/main/openfoam_gmsh_2d_aerofoil/index.md",
             "type": "blog",
             "releaseDate": "2022-12"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/peteole/blog/main/huddle_ory_authentication/index.md",
+            "type": "blog",
+            "name": "Huddle: Authentication with ORY",
+            "releaseDate": "2022-05"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/peteole/blog/main/huddle_gql_client/index.md",
+            "type": "blog",
+            "name": "Huddle: Type safe GraphQL Client",
+            "releaseDate": "2022-04"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/peteole/blog/main/huddle_gql_server/index.md",
+            "type": "blog",
+            "name": "Huddle: GraphQL Server",
+            "releaseDate": "2022-03"
         }
     ]
 }
