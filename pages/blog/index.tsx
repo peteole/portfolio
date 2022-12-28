@@ -79,7 +79,7 @@ export async function loadBlogPosts():Promise<BlogPost[]>{
         const baseUrl = urls[i].replace("index.md","")
         //content = content.replace(/!\[.*\]\((.*)\)/g,`![image](${baseUrl}$1)`)
         // replace relative links with absolute links
-        content = content.replace(/\[(.*)\]\((([a-z]|[A_Z]|[0-9]|\.|\/)*)\)/g,`[$1](${baseUrl}$2)`)
+        content = content.replace(/\[(.*)\]\((([a-z]|[A_Z]|[0-9]|\_|\-|\.|\/)*)\)/g,`[$1](${baseUrl}$2)`)
         //console.log(content)
         return {
             content:content,
