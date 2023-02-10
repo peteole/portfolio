@@ -115,6 +115,24 @@
             "demo": "https://zji6a3.deta.dev/"
         },
         {
+            "name": "Covid Simulation",
+            "description": "Monte-Carlo estimation of covid infection risks based on contact lists",
+            "entity": "personal",
+            "type": "simulation",
+            "startDate": "2020-12",
+            "endDate": "2021-01",
+            "roles": [
+                "Developer"
+            ],
+            "keywords": [
+                "Simulation",
+                "Probability Theory",
+                "Web App"
+            ],
+            "url": "https://github.com/peteole/covidSim",
+            "demo": "https://peteole.github.io/covidsim/dist/home.html"
+        },
+        {
             "name": "H7-Jet",
             "description": "Design of a flying-wing radio-controlled plane from the ground up",
             "type": "engineering",
