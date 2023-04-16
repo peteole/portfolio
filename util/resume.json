@@ -79,6 +79,22 @@
     ],
     "projects": [
         {
+            "name": "Probabilistic data integration engine",
+            "description": "Development of a data integration that can work with probabilistic data sources in Rust",
+            "startDate": "2022-10",
+            "url": "https://github.com/peteole/probabilistic-data-integration",
+            "roles": [
+                "Developer"
+            ],
+            "keywords": [
+                "Rust",
+                "Data Science",
+                "Rust",
+                "Data Integration"
+            ],
+            "entity": "personal"
+        },
+        {
             "name": "Huddle",
             "description": "Founding of a student group developing a platform that allows students to find their next student group",
             "url": "https://huddle.hsg.fs.tum.de",
