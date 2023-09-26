@@ -13,8 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NextUIProvider>
       <Navbar isBordered variant="sticky">
         <Navbar.Content>
-          {pages.map((v, i) => (
-            <Link key={i} href={v.path}><Navbar.Link isActive={router.pathname === v.path}>{v.name}</Navbar.Link></Link>
+          {pages.map((v, i) => (<Navbar.Link as={Link} key={i} isActive={router.pathname === v.path} href={v.path}>{v.name}</Navbar.Link>
           ))}
         </Navbar.Content>
 

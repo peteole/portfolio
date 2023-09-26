@@ -1,3 +1,4 @@
+'use client';
 import { Container, Grid, Row } from "@nextui-org/react"
 import React, { useEffect } from "react"
 

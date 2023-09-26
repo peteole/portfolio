@@ -12,12 +12,9 @@ class MyDocument extends Document {
   }
 
   render() {
-    console.log("rendering document");
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}
-          <link rel="icon" href="/icon.svg" />
-        </Head>
+        <Head>{CssBaseline.flush()}</Head>
         <body>
           <Main />
           <NextScript />
@@ -28,7 +25,3 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
-
-
-"nextui-c-dIWzTP nextui-c-PJLV nextui-c-dIWzTP-hfnKRU-color-default nextui-c-dIWzTP-isWIbj-animated-true nextui-c-PJLV-gulvcB-isFocusVisible-false nextui-c-dIWzTP-ibzThln-css nextui-link nextui-navbar-link"
-"nextui-c-dIWzTP nextui-c-PJLV nextui-c-dIWzTP-hfnKRU-color-default nextui-c-dIWzTP-isWIbj-animated-true nextui-c-PJLV-gulvcB-isFocusVisible-false nextui-c-dIWzTP-ihuOuWz-css nextui-link nextui-navbar-link"
