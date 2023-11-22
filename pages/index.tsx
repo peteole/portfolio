@@ -33,10 +33,11 @@ const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
               <Col>
                 <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
                 <Text h3>{v.institution}</Text>
+                <Text h3>{v.area} ({v.studyType})</Text>
               </Col>
             </Card.Header>
             <Card.Body>
-              <Text>Score: {v.score}</Text>
+              {v.score && <Text>Score: {v.score}</Text>}
               {v.courses && <Container ><Text h4>Courses</Text>{v.courses.map((c, i) => <Badge key={i}>{c}</Badge>)}</Container>}
             </Card.Body>
             {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
