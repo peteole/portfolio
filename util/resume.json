@@ -88,6 +88,27 @@
     ],
     "projects": [
         {
+            "name": "Bachelor Thesis in Reinforcement Learning",
+            "startDate": "2023-05",
+            "endDate": "2023-10",
+            "description": "Employed Multi-Agent Reinforcement Learning on a financial model, found new Nash equilibria",
+            "entity": "TUM",
+            "type": "thesis",
+            "roles": [
+                "Developer",
+                "Researcher"
+            ],
+            "keywords": [
+                "Reinforcement Learning",
+                "Multi-Agent Systems",
+                "Game Theory",
+                "Python",
+                "PyTorch",
+                "Financial modelling"
+            ],
+            "url": "/petersen-bachelor-thesis.pdf"
+        },
+        {
             "name": "Probabilistic data integration engine",
             "description": "Development of a data integration that can work with probabilistic data sources in Rust",
             "startDate": "2022-10",
@@ -108,6 +129,7 @@
             "description": "Founding of a student group developing a platform that allows students to find their next student group",
             "url": "https://huddle.hsg.fs.tum.de",
             "startDate": "2021-06",
+            "endDate": "2023-09",
             "entity": "TUM",
             "type": "volunteering",
             "roles": [
