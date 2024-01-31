@@ -1,4 +1,4 @@
-import { Badge, Card, Col, Container, Row, Text } from '@nextui-org/react'
+import { Badge, Card, CardHeader, CardBody, CardFooter } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -16,110 +16,110 @@ export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () =
 const Home: NextPage<{ jsonResume: ResumeSchema }> = ({ jsonResume }) => {
 
   return (
-    <Container className="cv-body">
+    <div className="cv-body">
       <Head>
         <title>{jsonResume.basics?.name}</title>
       </Head>
       {jsonResume.basics && <>
         <h1>Hi, I am {jsonResume.basics?.name}</h1>
-        {jsonResume.basics.summary && <Text>{jsonResume.basics?.summary}</Text>}
+        {jsonResume.basics.summary && <p>{jsonResume.basics?.summary}</p>}
       </>}
 
-      <Text h2>Education</Text>
+      <h2>Education</h2>
       <CardList>
         {jsonResume.education?.map((v, i) => (
           <Card key={i} isHoverable className='cv-card'>
-            <Card.Header>
-              <Col>
+            <CardHeader>
+              <div>
                 <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
-                <Text h3>{v.institution}</Text>
-                <Text h3>{v.area} ({v.studyType})</Text>
-              </Col>
-            </Card.Header>
-            <Card.Body>
-              {v.score && <Text>Score: {v.score}</Text>}
-              {v.courses && <Container ><Text h4>Courses</Text>{v.courses.map((c, i) => <Badge key={i}>{c}</Badge>)}</Container>}
-            </Card.Body>
-            {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+                <h3>{v.institution}</h3>
+                <h3>{v.area} ({v.studyType})</h3>
+              </div>
+            </CardHeader>
+            <CardBody>
+              {v.score && <p>Score: {v.score}</p>}
+              {v.courses && <div ><p>Courses</p>{v.courses.map((c, i) => <Badge key={i}>{c}</Badge>)}</div>}
+            </CardBody>
+            {v.url && <CardFooter><Link href={v.url}>Learn more</Link></CardFooter>}
           </Card>))}
       </CardList>
 
       {jsonResume.work && <>
-        <Text h2>Experience</Text>
+        <h2>Experience</h2>
         <CardList>
           {jsonResume.work.map((v, i) => <>
             <Card key={i} isHoverable className='cv-card'>
-              <Card.Header>
-                <Col>
-                  <Row>
+              <CardHeader>
+                <div>
+                  <div className="row">
                     <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
                     <Badge color="primary">{v.position}</Badge>
-                  </Row>
-                  <Text h3>{v.name}</Text>
-                </Col>
-              </Card.Header>
-              <Card.Body>
-                <Text>{v.summary}</Text>
-                <Text>{v.description}</Text>
-                {v.highlights && <Container >
-                  <Text h4>Highlights</Text>
-                  {v.highlights.map((c, i) => <Text key={i}>- {c}</Text>)}
-                </Container>}
-              </Card.Body>
-              {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+                  </div>
+                  <h3>{v.name}</h3>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <p>{v.summary}</p>
+                <p>{v.description}</p>
+                {v.highlights && <div >
+                  <p>Highlights</p>
+                  {v.highlights.map((c, i) => <p key={i}>- {c}</p>)}
+                </div>}
+              </CardBody>
+              {v.url && <CardFooter><Link href={v.url}>Learn more</Link></CardFooter>}
             </Card>
           </>)}
         </CardList>
       </>}
       {jsonResume.volunteer && <>
-        <Text h2>Volunteering</Text>
+        <h2>Volunteering</h2>
         <CardList>
           {jsonResume.volunteer.map((v, i) => <>
             <Card key={i} isHoverable className='cv-card'>
-              <Card.Header>
-                <Col>
-                  <Row>
+              <CardHeader>
+                <div>
+                  <div className="row">
                     <Badge color="primary" >{v.startDate} to {v.endDate || "now"}</Badge>
-                    <Badge color="primary">{v.position}</Badge></Row>
-                  <Text h3>{v.organization}</Text>
-                </Col>
-              </Card.Header>
-              <Card.Body>
-                <Text>{v.summary}</Text>
-                {v.highlights && <Container >
-                  <Text h4>Highlights</Text>
-                  {v.highlights.map((c, i) => <Text key={i}>- {c}</Text>)}
-                </Container>}
-              </Card.Body>
-              {v.url && <Card.Footer><Link href={v.url}>Learn more</Link></Card.Footer>}
+                    <Badge color="primary">{v.position}</Badge></div>
+                  <h3>{v.organization}</h3>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <p>{v.summary}</p>
+                {v.highlights && <div >
+                  <p>Highlights</p>
+                  {v.highlights.map((c, i) => <p key={i}>- {c}</p>)}
+                </div>}
+              </CardBody>
+              {v.url && <CardFooter><Link href={v.url}>Learn more</Link></CardFooter>}
             </Card>
           </>)}
         </CardList>
       </>}
       {jsonResume.awards && <>
-        <Text h2>Awards</Text>
+        <h2>Awards</h2>
         <CardList >
           {jsonResume.awards.map((v, i) => <>
             <Card key={i} isHoverable className='cv-card'>
-              <Card.Header>
-                <Col>
-                  <Row>
+              <CardHeader>
+                <div>
+                  <div className="row">
                     <Badge color="primary" >{v.date}</Badge>
                     <Badge color="primary">{v.awarder}</Badge>
-                  </Row>
-                  <Text h3>{v.title}</Text>
-                </Col>
-              </Card.Header>
-              <Card.Body>
-                <Text>{v.summary}</Text>
-              </Card.Body>
-              {typeof v['url'] == "string" && <Card.Footer><Link href={v['url']}>Learn more</Link></Card.Footer>}
+                  </div>
+                  <h3>{v.title}</h3>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <p>{v.summary}</p>
+              </CardBody>
+              {typeof v['url'] == "string" && <CardFooter><Link href={v['url']}>Learn more</Link></CardFooter>}
             </Card>
           </>)}
         </CardList>
       </>}
 
-    </Container>
+    </div>
   )
 }
 

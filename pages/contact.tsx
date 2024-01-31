@@ -1,8 +1,9 @@
-import { Container, Text } from '@nextui-org/react'
+
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import resume, { ResumeSchema } from "../util/resume"
+import { Col, Container, Row, Text } from "../components/layout"
 
 
 export const getStaticProps: GetStaticProps<{ jsonResume: ResumeSchema }> = () => {

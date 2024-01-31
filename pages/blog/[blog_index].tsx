@@ -1,14 +1,14 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import Head from 'next/head'
 import resume, { ResumeSchema } from "../../util/resume"
-import { Badge, Card, Col, Container, Row, Text } from "@nextui-org/react"
+import { Badge, Card} from "@nextui-org/react"
 import { loadBlogPosts } from "."
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import { BlogPost } from "."
-
+import { Col, Container, Row, Text } from "../../components/layout"
 
 export const getStaticProps: GetStaticProps<BlogPost> = async (context) => {
     const index = context.params?.["blog_index"]?.toString() || ""

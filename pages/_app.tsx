@@ -1,9 +1,8 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { Avatar, CssBaseline, Navbar, NextUIProvider } from '@nextui-org/react'
-import Link from 'next/link'
+// pages/_app.js
+import * as React from "react";
+import {  Navbar, NextUIProvider, NavbarContent, Link } from '@nextui-org/react'
 import { useRouter } from 'next/router'
-
+import { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const pages = [{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: "Skills", path: "/skills" }, { name: "CV", path: "/cv" }, { name: "Contact", path: "/contact" },{name: "Blog", path: "/blog"}]
@@ -11,17 +10,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   console.log(router.pathname)
   return <>
     <NextUIProvider>
-      <Navbar isBordered variant="sticky">
-        <Navbar.Content>
+      <Navbar isBordered>
+        <NavbarContent>
           {pages.map((v, i) => (
-            <Link key={i} href={v.path}><Navbar.Link isActive={router.pathname === v.path}>{v.name}</Navbar.Link></Link>
+            <Link key={i} href={v.path}>{v.name}</Link>
           ))}
-        </Navbar.Content>
+        </NavbarContent>
 
       </Navbar>
       <Component {...pageProps} />
     </NextUIProvider>
   </>
 }
-
-export default MyApp
+export default MyApp;

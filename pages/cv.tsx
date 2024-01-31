@@ -1,5 +1,6 @@
-import { Col, Container, Text } from "@nextui-org/react"
+
 import { NextPage } from "next"
+import { Col, Container, Row, Text } from "../components/layout"
 
 const CV: NextPage = () => {
     return <Container className="cv-body">

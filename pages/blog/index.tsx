@@ -1,9 +1,10 @@
 import { GetStaticProps, NextPage } from "next/types"
 import Head from 'next/head'
-import { Badge, Card, Col, Container, Row, Text } from "@nextui-org/react"
+import { Badge, Card, CardBody, CardFooter, CardHeader} from "@nextui-org/react"
 import CardList from "../../components/CardList"
 import { useRouter } from 'next/router'
 import Link from "next/link"
+import { Col, Container, Row, Text } from "../../components/layout"
 
 export type BlogPost = {
     title: string,
@@ -40,20 +41,20 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     contentPreview = contentPreview.replace(/[^a-zA-Z \n]/g, "").slice(0, 50)
                     return (
                         <Card key={i} className='cv-card' isHoverable>
-                            <Card.Header>
+                            <CardHeader>
                                 <Row justify="space-between">
                                     <Text h3>{post.title}</Text>
                                     {post.date && <Badge color="primary">{post.date}</Badge>}
                                 </Row>
-                            </Card.Header>
-                            <Card.Body>
+                            </CardHeader>
+                            <CardBody>
                                 <Text style={{ overflowWrap: "normal", width: "80%", overflow: "hidden" }}>
                                     {contentPreview}...
                                 </Text>
-                            </Card.Body>
-                            <Card.Footer>
+                            </CardBody>
+                            <CardFooter>
                                 <Link href={"/blog/" + i}>Read post</Link>
-                            </Card.Footer>
+                            </CardFooter>
                         </Card>)
                 })}
             </CardList>

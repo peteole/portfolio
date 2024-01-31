@@ -1,4 +1,4 @@
-import { Container, Grid, Row } from "@nextui-org/react"
+import { Container, GridContainer, Row } from "./layout"
 import React, { useEffect } from "react"
 
 const CardList: React.FC<{ children: JSX.Element[] | undefined }> = (props) => {
@@ -24,13 +24,13 @@ const CardList: React.FC<{ children: JSX.Element[] | undefined }> = (props) => {
     // fallback to grid
     return (
         <Container css={{ maxW: "1200px" }}>
-            <Grid.Container gap={2} justify="center">
+            <GridContainer gap={2} justify="center">
                 {props.children?.map((child, index) =>
-                    <Grid key={index} >
+                    <div key={index} >
                         {child}
-                    </Grid>
+                    </div>
                 )}
-            </Grid.Container>
+            </GridContainer>
         </Container>
     )
 
